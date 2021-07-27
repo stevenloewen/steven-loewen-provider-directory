@@ -1,6 +1,4 @@
-# Akira Provider Directory Frontend Challenge 
-
-## 
+# THVC Provider Directory Frontend Challenge 
 
 TELUS Health Virtual Care (THVC) is an alternative way to access primary care health services in Canada. Think of it as a “virtual walk-in clinic”, but without any wait and better follow-up care. We provide on-demand primary care to more than 2.8 million Canadians.
 
@@ -11,13 +9,12 @@ Our intake coordinators are now spending more time doing bookings (which is an a
 Our current booking process can be confusing for our intake coordinators and difficult for them to find a provider’s availability.
 Because the number of services and allied health providers has grown, intake coordinators have difficulty recommending the appropriate provider for the needs of the patient.
 
-We are updating our apps to allow patients to browse our specialists, and book their own appointments directly. Your job is to implement a part of the booking process, provider listing and proifiles, in our patient app to be more efficient and to support our patients’ needs and goals.
+We are updating our apps to allow patients to browse our specialists, and book their own appointments directly. Your job is to implement a part of the booking process, the provider listing and proifiles, in our patient app to be more efficient and to support our patients’ needs and goals.
 
 The considerations:
-Create a small react app that allows us to interact with the requested screens.
-You can use your preferred styling framework - scss, styled components, etc.
-We are providing you with mobile and desktop views, however you do not have to create responsive views - feel free to just do one or the other we are just including them both to give you options.
-
+- Create a small react app that allows us to interact with the requested screens.
+- You can use your preferred styling framework - css, less, scss, styled-components, etc.
+- We are providing you with mobile and desktop views, however you do not have to create responsive views - feel free to just do one or the other we are just including them both to give you options.
 
 
 ## Available Scripts
