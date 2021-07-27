@@ -1,6 +1,11 @@
 // This file contains the two API functions you'll use fetchProviders, and fetchProviders
 
 /**
+ * We are mimicking a REST request here, so it takes a sec to respond
+ */
+const REQUEST_RESPONSE_TIME = 500
+
+/**
  * Fetch a a given provider by ID, and get the complete representation
  * @param providerId - The ID of the provider to "fetch"
  * @return {Promise<{id: string, name: string, title: string, avatarUrl: string, bio: string, }>}
@@ -16,7 +21,7 @@ export const fetchProvider = (providerId) => {
           reject(`Provider with id ${providerId} not found!`)
         }
       },
-      1500
+      REQUEST_RESPONSE
     )
   )
 };
@@ -29,7 +34,7 @@ export const fetchProviders = () => {
   return new Promise(
     (resolve) => setTimeout(
       () => resolve(fullDataset.map(makePartialRepresentation)),
-      1500
+      REQUEST_RESPONSE
     )
   )
 };
