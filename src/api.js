@@ -21,7 +21,7 @@ export const fetchProvider = (providerId) => {
           reject(`Provider with id ${providerId} not found!`)
         }
       },
-      REQUEST_RESPONSE
+      REQUEST_RESPONSE_TIME
     )
   )
 };
@@ -34,7 +34,7 @@ export const fetchProviders = () => {
   return new Promise(
     (resolve) => setTimeout(
       () => resolve(fullDataset.map(makePartialRepresentation)),
-      REQUEST_RESPONSE
+      REQUEST_RESPONSE_TIME
     )
   )
 };
