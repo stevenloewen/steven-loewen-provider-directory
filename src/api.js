@@ -1,4 +1,4 @@
-// This file contains the two API functions you'll use fetchProviders, and fetchProviders
+// This file contains the two API functions which you'll use: fetchProviders, and fetchProviders
 
 /**
  * We are mimicking a REST request here, so it takes a sec to respond
