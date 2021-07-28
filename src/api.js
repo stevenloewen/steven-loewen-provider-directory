@@ -1,7 +1,7 @@
 // This file contains the two API functions which you'll use: fetchProviders, and fetchProviders
 
 /**
- * We are mimicking a REST request here, so it takes a sec to respond
+ * We are mimicking a REST request here, so it takes a half sec to respond
  */
 const REQUEST_RESPONSE_TIME = 500
 
