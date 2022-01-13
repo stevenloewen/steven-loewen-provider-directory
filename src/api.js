@@ -1,3 +1,8 @@
+import Caroline from "./assets/avatars/caroline.jpg";
+import Tamara from "./assets/avatars/tamara.jpg";
+import Francois from "./assets/avatars/francois.jpg";
+import Marco from "./assets/avatars/marco.jpg";
+
 // This file contains the two API functions which you'll use: fetchProviders, and fetchProviders
 
 /**
@@ -39,8 +44,8 @@ export const fetchProviders = () => {
   )
 };
 
-const makePartialRepresentation = ({id, name, title, avatarUrl, bio, availabilty}) => ({
-  id, name, title, avatarUrl, bio, availabilty
+const makePartialRepresentation = ({id, name, title, avatarUrl, bio, availabilty, profession}) => ({
+  id, name, title, avatarUrl, bio, availabilty, profession
 });
 
 const fullDataset = [
@@ -48,7 +53,8 @@ const fullDataset = [
     id: "1",
     name: "Caroline Champagne",
     title: "MSW",
-    avatarUrl: "",
+    profession: "Registered Social Worker",
+    avatarUrl: Caroline,
     availabilty: "tomorrow",
     location: "Quebec City, Quebec",
     education: "Concordia University\n",
@@ -66,7 +72,8 @@ const fullDataset = [
     id: "2",
     name: "Tamara Childs",
     title: "MA, RCC",
-    avatarUrl: "",
+    profession: "Registered Clinical Counsellor",
+    avatarUrl: Tamara,
     availabilty: "next-week",
     location: "Toronto, Ontario",
     education: "University of Toronto",
@@ -86,7 +93,8 @@ const fullDataset = [
     id: "3",
     name: "Francois-Pierre Decoste",
     title: "MSW",
-    avatarUrl: "",
+    profession: "Social Worker",
+    avatarUrl: Francois,
     availabilty: "tomorrow",
     location: "Montreal, Quebec",
     education: "McGill",
@@ -100,7 +108,8 @@ const fullDataset = [
     id: "4",
     name: "Marco DiCroce",
     title: "MSW",
-    avatarUrl: "",
+    profession: "Registered Social Worker",
+    avatarUrl: Marco,
     availabilty: "tomorrow",
     location: "Toronto, Ontario",
     education: "University of Toronto",
