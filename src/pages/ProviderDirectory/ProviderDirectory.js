@@ -1,7 +1,7 @@
 import "./ProviderDirectory.scss";
 
 import React, { useEffect, useState } from "react";
-import { fetchProviders, fetchProvider } from "../../api";
+import { fetchProviders } from "../../api";
 
 import Header from "../../components/Header/Header";
 import NumberOfProviders from "../../components/NumberOfProviders/NumberOfProviders";
@@ -24,7 +24,8 @@ console.log("provider list", providerList);
         return (
           <ProviderDirectoryCard
             key={index}
-            availabilty={provider.availabilty}
+            id={provider.id}
+            availability={provider.availability}
             avatarUrl={provider.avatarUrl}
             bio={provider.bio}
             name={provider.name}

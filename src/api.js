@@ -44,8 +44,8 @@ export const fetchProviders = () => {
   )
 };
 
-const makePartialRepresentation = ({id, name, title, avatarUrl, bio, availabilty, profession}) => ({
-  id, name, title, avatarUrl, bio, availabilty, profession
+const makePartialRepresentation = ({id, name, title, avatarUrl, bio, availability, profession}) => ({
+  id, name, title, avatarUrl, bio, availability, profession
 });
 
 const fullDataset = [
@@ -55,7 +55,7 @@ const fullDataset = [
     title: "MSW",
     profession: "Registered Social Worker",
     avatarUrl: Caroline,
-    availabilty: "tomorrow",
+    availability: "tomorrow",
     location: "Quebec City, Quebec",
     education: "Concordia University\n",
     languages: ["French"],
@@ -74,7 +74,7 @@ const fullDataset = [
     title: "MA, RCC",
     profession: "Registered Clinical Counsellor",
     avatarUrl: Tamara,
-    availabilty: "next-week",
+    availability: "next-week",
     location: "Toronto, Ontario",
     education: "University of Toronto",
     languages: ["English"],
@@ -95,7 +95,7 @@ const fullDataset = [
     title: "MSW",
     profession: "Social Worker",
     avatarUrl: Francois,
-    availabilty: "tomorrow",
+    availability: "tomorrow",
     location: "Montreal, Quebec",
     education: "McGill",
     languages: ["English", "French"],
@@ -110,7 +110,7 @@ const fullDataset = [
     title: "MSW",
     profession: "Registered Social Worker",
     avatarUrl: Marco,
-    availabilty: "tomorrow",
+    availability: "tomorrow",
     location: "Toronto, Ontario",
     education: "University of Toronto",
     languages: ["English"],
