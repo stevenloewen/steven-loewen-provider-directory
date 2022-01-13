@@ -1,0 +1,40 @@
+.provider-profile-detail-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__image {
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.provider-profile-detail-card-text {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 6px;
+
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+
+    color: #6e7178;
+  }
+
+  &__subtitle {
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+
+    color: #3f4145;
+  }
+}
