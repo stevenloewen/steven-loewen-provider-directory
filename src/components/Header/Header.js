@@ -10,7 +10,7 @@ const Header = () => {
       <h1 className="header__title">Browse our providers</h1>
       <h3 className="header__subtitle">Mental Wellness</h3>
       <div className="location">
-        <img className="location__icon" src={LocationIcon}></img>
+        <img className="location__icon" src={LocationIcon} alt="location icon"></img>
         <p className="location__province">ON</p>
       </div>
     </div>

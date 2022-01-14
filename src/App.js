@@ -3,7 +3,7 @@ import './App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ProviderDirectory from './pages/ProviderDirectory/ProviderDirectory';
 import ProviderProfile from './pages/ProviderProfile/ProviderProfile';
-import {fetchProviders, fetchProvider} from "./api";
+// import {fetchProviders, fetchProvider} from "./api";
 
 function App() {
   // Samples of API requests

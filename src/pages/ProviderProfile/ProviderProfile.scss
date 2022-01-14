@@ -48,6 +48,10 @@
   }
 
   .provider-profile-intro-bio {
+    overflow: hidden;
+
+    transition: max-height 0.5s ease;
+
     &__text {
       font-family: Helvetica Neue;
       font-style: normal;
@@ -84,6 +88,13 @@
   &__chevron {
     width: 12px;
     height: 6.75px;
+
+    transition: transform 0.5s ease;
+
+    &--rotate {
+        transform: rotate(180deg);
+        transition: transform 0.5s ease;
+    }
   }
 }
 
@@ -104,7 +115,7 @@
   align-items: center;
 
   padding: 18px 32px;
-margin-bottom: 10px;
+  margin-bottom: 10px;
   width: 355px;
   height: 54px;
 
