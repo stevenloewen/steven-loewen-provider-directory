@@ -25,7 +25,7 @@ const ProviderProfile = () => {
 
   const toggleReadMore = (e) => {
       setReadMore(!readMore);
-      setHeight( readMore ? `${content.current.scrollHeight}px` : "60px");
+      setHeight( readMore ? "60px" : `${content.current.scrollHeight}px`);
   }
 
   useEffect(() => {
@@ -35,7 +35,6 @@ const ProviderProfile = () => {
     });
   }, [id]);
   console.log("profile data", providerProfileData);
-//   console.log("languages", providerProfileData.languages[0]);
 
   return (
     <div className="provider-profile">
@@ -58,7 +57,7 @@ const ProviderProfile = () => {
         </div>
         <div className="read-more" onClick={toggleReadMore}>
           <p className="read-more__text">Read more</p>
-          <img src={Chevron} alt="chevron" className={`read-more__chevron ${!readMore && "read-more__chevron--rotate"}`} />
+          <img src={Chevron} alt="chevron" className={`read-more__chevron ${readMore && "read-more__chevron--rotate"}`} />
         </div>
       </div>
       <div className="provider-profile-details-container">

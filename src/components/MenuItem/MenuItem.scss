@@ -1,0 +1,17 @@
+.menu-item {
+    display: flex;
+    justify-content: center;
+    padding: 5px 16px;
+
+    &__option {
+        font-family: Helvetica Neue;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+    
+        letter-spacing: 0.01em;
+    
+        color: #3f4145;
+    }
+}

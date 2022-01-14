@@ -1,9 +1,9 @@
 .header {
   padding: 24px 20px 16px;
 
-  background: #FFFFFF;
+  background: #ffffff;
 
-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
 
   &__title {
     margin-bottom: 8px;
@@ -29,17 +29,31 @@ box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
   }
 }
 
+.location-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100px;
+
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: max-height 0.5s ease;
+}
+
 .location {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 10px 16px;
-  width: 69px;
-  height: 37px;
+//   width: 100px;
+//   height: 37px;
 
-  border: 1px solid #eeeeee;
-  border-radius: 94px;
+//   border: 1px solid #eeeeee;
+//   border-radius: 94px;
 
   &__icon {
     width: 8.86px;
@@ -57,4 +71,20 @@ box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
 
     color: #3f4145;
   }
+
+  &__chevron {
+    width: 12px;
+    height: 6.75px;
+
+    transition: transform 0.5s ease;
+
+    &--rotate {
+        transform: rotate(180deg);
+        transition: transform 0.5s ease;
+    }
+  }
+}
+
+.location-menu {
+    padding-bottom: 5px;
 }
