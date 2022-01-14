@@ -43,22 +43,26 @@ const ProviderDirectory = () => {
       <Header province={province} setProvince={setProvince} />
       <NumberOfProviders
         provinceFullName={provinceFullName}
-        number={(province === "ALL") ? providerList.length : filteredProviderList.length}
+        number={
+          province === "ALL" ? providerList.length : filteredProviderList.length
+        }
       />
-      {((province === "ALL") ? providerList : filteredProviderList).map((provider, index) => {
-        return (
-          <ProviderDirectoryCard
-            key={index}
-            id={provider.id}
-            availability={provider.availability}
-            avatarUrl={provider.avatarUrl}
-            bio={provider.bio}
-            name={provider.name}
-            title={provider.title}
-            profession={provider.profession}
-          />
-        );
-      })}
+      {(province === "ALL" ? providerList : filteredProviderList).map(
+        (provider, index) => {
+          return (
+            <ProviderDirectoryCard
+              key={index}
+              id={provider.id}
+              availability={provider.availability}
+              avatarUrl={provider.avatarUrl}
+              bio={provider.bio}
+              name={provider.name}
+              title={provider.title}
+              profession={provider.profession}
+            />
+          );
+        }
+      )}
     </div>
   );
 };

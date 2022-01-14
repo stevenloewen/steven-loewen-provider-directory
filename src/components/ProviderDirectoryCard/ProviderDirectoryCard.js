@@ -1,10 +1,10 @@
 import "./ProviderDirectoryCard.scss";
 
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ProviderDirectoryCard = ({
-    id,
+  id,
   availability,
   avatarUrl,
   bio,
@@ -28,7 +28,7 @@ const ProviderDirectoryCard = ({
       </div>
       <p className="provider-bio">{bio}</p>
       <div className="availability">
-          <p className="availability__text">{`Available ${availability}`}</p>
+        <p className="availability__text">{`Available ${availability}`}</p>
       </div>
     </Link>
   );

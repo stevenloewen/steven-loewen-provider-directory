@@ -30,17 +30,17 @@
 }
 
 .location-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    width: 100px;
+  width: 100px;
 
-    border: 1px solid #eeeeee;
-    border-radius: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 20px;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease;
 }
 
 .location {
@@ -49,11 +49,6 @@
   align-items: center;
 
   padding: 10px 16px;
-//   width: 100px;
-//   height: 37px;
-
-//   border: 1px solid #eeeeee;
-//   border-radius: 94px;
 
   &__icon {
     width: 8.86px;
@@ -79,12 +74,12 @@
     transition: transform 0.5s ease;
 
     &--rotate {
-        transform: rotate(180deg);
-        transition: transform 0.5s ease;
+      transform: rotate(180deg);
+      transition: transform 0.5s ease;
     }
   }
 }
 
 .location-menu {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }

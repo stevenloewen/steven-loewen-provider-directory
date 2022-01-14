@@ -71,7 +71,7 @@
   }
 }
 .provider-bio {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 2;
@@ -86,27 +86,27 @@
   text-overflow: ellipsis;
 }
 .availability {
-    display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
 
-width: 140px;
-height: 25px;
+  width: 140px;
+  height: 25px;
 
-background: #EFF1FE;
-border-radius: 200px;
+  background: #eff1fe;
+  border-radius: 200px;
 
-&__text {
+  &__text {
     font-family: Helvetica Neue;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 110%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 110%;
 
-letter-spacing: 0.02em;
+    letter-spacing: 0.02em;
 
-color: #3F4145;
-}
+    color: #3f4145;
+  }
 }
