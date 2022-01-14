@@ -24,14 +24,14 @@ const ProviderProfile = () => {
   const content = useRef(null);
 
   const toggleReadMore = (e) => {
-      setReadMore(!readMore);
-      setHeight( readMore ? "60px" : `${content.current.scrollHeight}px`);
-  }
+    setReadMore(!readMore);
+    setHeight(readMore ? "60px" : `${content.current.scrollHeight}px`);
+  };
 
   useEffect(() => {
     fetchProvider(id).then((response) => {
       setProviderProfileData(response);
-      setLanguages(response.languages.join(', '));
+      setLanguages(response.languages.join(", "));
     });
   }, [id]);
   console.log("profile data", providerProfileData);
@@ -50,14 +50,24 @@ const ProviderProfile = () => {
         <h3 className="provider-profile-intro__profession">
           {providerProfileData.profession}
         </h3>
-        <div className="provider-profile-intro-bio" ref={content} style={{ maxHeight: `${height}` }}>
+        <div
+          className="provider-profile-intro-bio"
+          ref={content}
+          style={{ maxHeight: `${height}` }}
+        >
           <p className="provider-profile-intro-bio__text">
             {providerProfileData.bio}
           </p>
         </div>
         <div className="read-more" onClick={toggleReadMore}>
           <p className="read-more__text">Read more</p>
-          <img src={Chevron} alt="chevron" className={`read-more__chevron ${readMore && "read-more__chevron--rotate"}`} />
+          <img
+            src={Chevron}
+            alt="chevron"
+            className={`read-more__chevron ${
+              readMore && "read-more__chevron--rotate"
+            }`}
+          />
         </div>
       </div>
       <div className="provider-profile-details-container">

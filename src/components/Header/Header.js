@@ -4,33 +4,36 @@ import React, { useState, useRef } from "react";
 
 import MenuItem from "../MenuItem/MenuItem";
 
-import { locationMockData } from "./LocationMockData";
+import { locationMockData } from "../../pages/ProviderDirectory/LocationMockData";
 
 import LocationIcon from "../../assets/icons/location-icon.svg";
 import Chevron from "../../assets/icons/chevron.svg";
 
-const Header = () => {
+const Header = ({ province, setProvince }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [province, setProvince] = useState(locationMockData[0]);
   const [height, setHeight] = useState("37px");
 
   const content = useRef(null);
 
   const toggleMenuOpen = (e) => {
     setMenuOpen(!menuOpen);
-    setHeight( menuOpen ? "37px" : `${content.current.scrollHeight}px`);
+    setHeight(menuOpen ? "37px" : `${content.current.scrollHeight}px`);
   };
 
   const selectProvince = (e) => {
-      setProvince(e)
-      console.log("event", e);
+    setProvince(e);
   };
 
   return (
     <div className="header">
       <h1 className="header__title">Browse our providers</h1>
       <h3 className="header__subtitle">Mental Wellness</h3>
-      <div className="location-container" onClick={toggleMenuOpen} ref={content} style={{ maxHeight: `${height}` }}>
+      <div
+        className="location-container"
+        onClick={toggleMenuOpen}
+        ref={content}
+        style={{ maxHeight: `${height}` }}
+      >
         <div className="location">
           <img
             className="location__icon"
@@ -48,7 +51,14 @@ const Header = () => {
         </div>
         <div className="location-menu">
           {locationMockData.map((location, index) => {
-            return <MenuItem key={index} location={location} toggleMenuOpen={toggleMenuOpen} selectProvince={() => selectProvince(location)}/>;
+            return (
+              <MenuItem
+                key={index}
+                location={location}
+                toggleMenuOpen={toggleMenuOpen}
+                selectProvince={() => selectProvince(location)}
+              />
+            );
           })}
         </div>
       </div>

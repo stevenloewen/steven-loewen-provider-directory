@@ -7,20 +7,45 @@ import Header from "../../components/Header/Header";
 import NumberOfProviders from "../../components/NumberOfProviders/NumberOfProviders";
 import ProviderDirectoryCard from "../../components/ProviderDirectoryCard/ProviderDirectoryCard";
 
+import { locationMockData, locationNames } from "./LocationMockData";
+
 const ProviderDirectory = () => {
   const [providerList, setProviderList] = useState([]);
+  const [province, setProvince] = useState(locationMockData[0]);
+  const [provinceFullName, setProvinceFullName] = useState(
+    locationNames[0].full
+  );
 
-  useEffect(() => {
+  const fetchListOfProviders = () => {
     fetchProviders().then((response) => {
       setProviderList(response);
     });
+  };
+
+  useEffect(() => {
+    locationNames.forEach((location) => {
+      if (province === location.abbr) {
+        setProvinceFullName(location.full);
+      }
+    });
+  }, [province]);
+
+  useEffect(() => {
+    fetchListOfProviders();
   }, []);
-console.log("provider list", providerList);
+
+  const filteredProviderList = providerList.filter((provider) =>
+    provider.location.includes(provinceFullName)
+  );
+
   return (
     <div className="provider-directory">
-      <Header />
-      <NumberOfProviders />
-      {providerList.map((provider, index) => {
+      <Header province={province} setProvince={setProvince} />
+      <NumberOfProviders
+        provinceFullName={provinceFullName}
+        number={filteredProviderList.length}
+      />
+      {filteredProviderList.map((provider, index) => {
         return (
           <ProviderDirectoryCard
             key={index}
