@@ -3,6 +3,14 @@
   justify-content: center;
   padding: 5px 16px;
 
+  &:hover {
+    background: #6277F0;
+  }
+
+  &:hover &__option {
+    color: #FFFFFF;
+  }
+
   &__option {
     font-family: Helvetica Neue;
     font-style: normal;
