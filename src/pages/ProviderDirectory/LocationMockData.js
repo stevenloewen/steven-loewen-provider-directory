@@ -1,4 +1,4 @@
-export const locationMockData = ["ON", "QC"];
+export const locationMockData = ["ON", "QC", "ALL"];
 
 export const locationNames = [
   {
@@ -8,5 +8,9 @@ export const locationNames = [
   {
     abbr: "QC",
     full: "Quebec",
+  },
+  {
+    abbr: "ALL",
+    full: "Canada",
   },
 ];

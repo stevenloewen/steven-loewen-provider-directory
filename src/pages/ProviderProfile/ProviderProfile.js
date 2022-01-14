@@ -34,7 +34,6 @@ const ProviderProfile = () => {
       setLanguages(response.languages.join(", "));
     });
   }, [id]);
-  console.log("profile data", providerProfileData);
 
   return (
     <div className="provider-profile">

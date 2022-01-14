@@ -43,9 +43,9 @@ const ProviderDirectory = () => {
       <Header province={province} setProvince={setProvince} />
       <NumberOfProviders
         provinceFullName={provinceFullName}
-        number={filteredProviderList.length}
+        number={(province === "ALL") ? providerList.length : filteredProviderList.length}
       />
-      {filteredProviderList.map((provider, index) => {
+      {((province === "ALL") ? providerList : filteredProviderList).map((provider, index) => {
         return (
           <ProviderDirectoryCard
             key={index}
